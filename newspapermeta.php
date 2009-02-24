@@ -171,16 +171,16 @@ class NewspaperMetaController {
           $links[] = array('title' => null, 'href' => '', 'prototype' => true);
           foreach($links as $link) {
             $formItem .= '<tr class="form-field">';
-              $formItem .= '<th><label class="image-title-label">Titel</label></th>';
+              $formItem .= '<th><label class="image-title-label">'.__("Title").'</label></th>';
               $formItem .= '<td><input type="text" class="image-title-field" name="' . $id . '[title][]" value="' . attribute_escape($link['title']) . '" /></td>';
             $formItem .= '</tr><tr>';
-              $formItem .= '<th><label class="image-href-label">' . (empty($link['href']) ? 'Bild' : '<a href="' . attribute_escape($link['href']) . '" target="_blank">Bild</a>') . '</label></th>';
-              $formItem .= '<td><input type="file" class="image-href-field" name="' . $id . '[upload][]" /></label><input type="hidden" name="' . $id . '[href][]" value="' . attribute_escape($link['href']) . '" /><input class="button" type="button" value="Ta bort" /></td>';
+              $formItem .= '<th><label class="image-href-label">' . (empty($link['href']) ? __("Image") : '<a href="' . attribute_escape($link['href']) . '" target="_blank">'.__("Image").'</a>') . '</label></th>';
+              $formItem .= '<td><input type="file" class="image-href-field" name="' . $id . '[upload][]" /></label><input type="hidden" name="' . $id . '[href][]" value="' . attribute_escape($link['href']) . '" /><input class="button" type="button" value="'.__("Remove image").'" /></td>';
             $formItem .= '</tr>';
           }
           $formItem .= '<tr>';
             $formItem .= '<th></th>';
-            $formItem .= '<td><input type="button" class="add button" value="Lägg till bild" /></td>';
+            $formItem .= '<td><input type="button" class="add button" value="'.__("Add link").'"/></td>';
           break;
         }
         case 'link-array':
@@ -198,16 +198,16 @@ class NewspaperMetaController {
           $links[] = array('title' => null, 'href' => 'http://', 'prototype' => true);
           foreach($links as $link) {
             $formItem .= '<tr class="form-field">';
-              $formItem .= '<th><label class="link-title-label">Titel</label></th>';
+              $formItem .= '<th><label class="link-title-label">'.__("Title").'</label></th>';
               $formItem .= '<td><input type="text" class="link-title-field" name="' . $id . '[title][]" value="' . attribute_escape($link['title']) . '" /></td>';
             $formItem .= '</tr><tr>';
-              $formItem .= '<th><label class="link-href-label">' . (empty($link['href']) || $link['href'] == 'http://' ? 'Länk' : '<a href="' . attribute_escape($link['href']) . '" target="_blank">Länk</a>') . '</label></th>';
-              $formItem .= '<td><input type="text" class="link-href-field" name="' . $id . '[href][]" value="' . attribute_escape($link['href']) . '" /><input class="button" type="button" value="Ta bort" /></td>';
+              $formItem .= '<th><label class="link-href-label">' . (empty($link['href']) || $link['href'] == 'http://' ? __("Link") : '<a href="' . attribute_escape($link['href']) . '" target="_blank">'.__("Link").'</a>') . '</label></th>';
+              $formItem .= '<td><input type="text" class="link-href-field" name="' . $id . '[href][]" value="' . attribute_escape($link['href']) . '" /><input class="button" type="button" value="'.__("Remove link").'" /></td>';
             $formItem .= '</tr>';
           }
           $formItem .= '<tr>';
             $formItem .= '<th></th>';
-            $formItem .= '<td><input type="button" class="add button" value="Lägg till länk" /></td>';
+            $formItem .= '<td><input type="button" class="add button" value="'.__("Add link").'"/></td>';
           break;
         }
         case 'hidden':
@@ -427,12 +427,7 @@ class NewspaperMetaController {
             'type'      => 'image',
             'max-width' => 166,
           ), 
-          'frontpage_article_image' => array(
-            'title'     => __('Image for frontpage-article', 'newspapermeta'),
-            'type'      => 'image',
-            'max-width' => 188,
-          ), 
-          'author' => array(
+            'author' => array(
             'title' => __('Author', 'newspapermeta'),
             'type'  => 'text',
           ), 
@@ -445,7 +440,7 @@ class NewspaperMetaController {
             'type'  => 'text',
           ), 
           'red_word' => array(
-            'title' => __('Super-introduction', 'newspapermeta'),
+            'title' => __('Lead', 'newspapermeta'),
             'type'  => 'text',
           ), 
           'qoute' => array(
