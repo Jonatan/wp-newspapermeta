@@ -6,7 +6,10 @@ Description: This plugin will add a set of predefined custom fields to the edit 
 Version: 2.0
 Author URI: http://goodold.se/
 */
-load_plugin_textdomain('newspapermeta');
+$plugin_dir = basename(dirname(__FILE__));
+load_plugin_textdomain( 'newspapermeta', 'wp-content/plugins/'.
+$plugin_dir.'/languages', $plugin_dir.'/languages' ); 
+
 NewspaperMetaController::getInstance();
 
 class NewspaperMeta {
