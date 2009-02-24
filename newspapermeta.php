@@ -6,7 +6,7 @@ Description: This plugin will add a set of predefined custom fields to the edit 
 Version: 2.0
 Author URI: http://goodold.se/
 */
-
+load_plugin_textdomain('newspapermeta');
 NewspaperMetaController::getInstance();
 
 class NewspaperMeta {
@@ -171,16 +171,16 @@ class NewspaperMetaController {
           $links[] = array('title' => null, 'href' => '', 'prototype' => true);
           foreach($links as $link) {
             $formItem .= '<tr class="form-field">';
-              $formItem .= '<th><label class="image-title-label">'.__("Title").'</label></th>';
+              $formItem .= '<th><label class="image-title-label">'.__('Title', 'newspapermeta').'</label></th>';
               $formItem .= '<td><input type="text" class="image-title-field" name="' . $id . '[title][]" value="' . attribute_escape($link['title']) . '" /></td>';
             $formItem .= '</tr><tr>';
-              $formItem .= '<th><label class="image-href-label">' . (empty($link['href']) ? __("Image") : '<a href="' . attribute_escape($link['href']) . '" target="_blank">'.__("Image").'</a>') . '</label></th>';
-              $formItem .= '<td><input type="file" class="image-href-field" name="' . $id . '[upload][]" /></label><input type="hidden" name="' . $id . '[href][]" value="' . attribute_escape($link['href']) . '" /><input class="button" type="button" value="'.__("Remove image").'" /></td>';
+              $formItem .= '<th><label class="image-href-label">' . (empty($link['href']) ? __('Image', 'newspapermeta') : '<a href="' . attribute_escape($link['href']) . '" target="_blank">'.__('Image', 'newspapermeta').'</a>') . '</label></th>';
+              $formItem .= '<td><input type="file" class="image-href-field" name="' . $id . '[upload][]" /></label><input type="hidden" name="' . $id . '[href][]" value="' . attribute_escape($link['href']) . '" /><input class="button" type="button" value="'.__('Remove image', 'newspapermeta').'" /></td>';
             $formItem .= '</tr>';
           }
           $formItem .= '<tr>';
             $formItem .= '<th></th>';
-            $formItem .= '<td><input type="button" class="add button" value="'.__("Add link").'"/></td>';
+            $formItem .= '<td><input type="button" class="add button" value="'.__('Add link', 'newspapermeta').'"/></td>';
           break;
         }
         case 'link-array':
@@ -198,16 +198,16 @@ class NewspaperMetaController {
           $links[] = array('title' => null, 'href' => 'http://', 'prototype' => true);
           foreach($links as $link) {
             $formItem .= '<tr class="form-field">';
-              $formItem .= '<th><label class="link-title-label">'.__("Title").'</label></th>';
+              $formItem .= '<th><label class="link-title-label">'.__('Title', 'newspapermeta').'</label></th>';
               $formItem .= '<td><input type="text" class="link-title-field" name="' . $id . '[title][]" value="' . attribute_escape($link['title']) . '" /></td>';
             $formItem .= '</tr><tr>';
-              $formItem .= '<th><label class="link-href-label">' . (empty($link['href']) || $link['href'] == 'http://' ? __("Link") : '<a href="' . attribute_escape($link['href']) . '" target="_blank">'.__("Link").'</a>') . '</label></th>';
-              $formItem .= '<td><input type="text" class="link-href-field" name="' . $id . '[href][]" value="' . attribute_escape($link['href']) . '" /><input class="button" type="button" value="'.__("Remove link").'" /></td>';
+              $formItem .= '<th><label class="link-href-label">' . (empty($link['href']) || $link['href'] == 'http://' ? __('Link', 'newspapermeta') : '<a href="' . attribute_escape($link['href']) . '" target="_blank">'.__('Link', 'newspapermeta').'</a>') . '</label></th>';
+              $formItem .= '<td><input type="text" class="link-href-field" name="' . $id . '[href][]" value="' . attribute_escape($link['href']) . '" /><input class="button" type="button" value="'.__('Remove link', 'newspapermeta').'" /></td>';
             $formItem .= '</tr>';
           }
           $formItem .= '<tr>';
             $formItem .= '<th></th>';
-            $formItem .= '<td><input type="button" class="add button" value="'.__("Add link").'"/></td>';
+            $formItem .= '<td><input type="button" class="add button" value="'.__('Add link', 'newspapermeta').'"/></td>';
           break;
         }
         case 'hidden':
