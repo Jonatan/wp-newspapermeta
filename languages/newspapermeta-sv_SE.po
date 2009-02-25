@@ -1,0 +1,127 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: newspapermeta\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-02-24 14:16+0100\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Jonatan Fried <jonatan.fried@fokus.se>\n"
+"Language-Team: Fokus theme <jonatan.fried@fokus.se>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Swedish\n"
+"X-Poedit-Country: Sweden\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: /Users/jonatanfried/Fokus/fokus-theme/newspapermeta\n"
+"X-Poedit-SearchPath-0: /Users/jonatanfried/Fokus/fokus-theme/newspapermeta\n"
+
+#: /Users/jonatanfried/Fokus/fokus-theme/newspapermeta/newspapermeta.php:177
+#: /Users/jonatanfried/Fokus/fokus-theme/newspapermeta/newspapermeta.php:204
+#: /Users/jonatanfried/Fokus/fokus-theme/newspapermeta/newspapermeta.php:457
+#: /Users/jonatanfried/Fokus/fokus-theme/newspapermeta/newspapermeta.php:472
+msgid "Title"
+msgstr "Titel"
+
+#: /Users/jonatanfried/Fokus/fokus-theme/newspapermeta/newspapermeta.php:180
+msgid "Image"
+msgstr "Bild"
+
+#: /Users/jonatanfried/Fokus/fokus-theme/newspapermeta/newspapermeta.php:181
+msgid "Remove image"
+msgstr "Ta bort bild"
+
+#: /Users/jonatanfried/Fokus/fokus-theme/newspapermeta/newspapermeta.php:186
+#: /Users/jonatanfried/Fokus/fokus-theme/newspapermeta/newspapermeta.php:213
+msgid "Add link"
+msgstr "Lägg till länk"
+
+#: /Users/jonatanfried/Fokus/fokus-theme/newspapermeta/newspapermeta.php:207
+msgid "Link"
+msgstr "Länk"
+
+#: /Users/jonatanfried/Fokus/fokus-theme/newspapermeta/newspapermeta.php:208
+msgid "Remove link"
+msgstr "Ta bort länk"
+
+#: /Users/jonatanfried/Fokus/fokus-theme/newspapermeta/newspapermeta.php:421
+msgid "Article information"
+msgstr "Artikelinformation"
+
+#: /Users/jonatanfried/Fokus/fokus-theme/newspapermeta/newspapermeta.php:423
+msgid "Top image"
+msgstr "Toppbild"
+
+#: /Users/jonatanfried/Fokus/fokus-theme/newspapermeta/newspapermeta.php:429
+msgid "Small image for frontpage"
+msgstr "Liten bild till framsidan"
+
+#: /Users/jonatanfried/Fokus/fokus-theme/newspapermeta/newspapermeta.php:434
+msgid "Author"
+msgstr "Författare"
+
+#: /Users/jonatanfried/Fokus/fokus-theme/newspapermeta/newspapermeta.php:438
+msgid "Photographer"
+msgstr "Fotograf"
+
+#: /Users/jonatanfried/Fokus/fokus-theme/newspapermeta/newspapermeta.php:442
+msgid "Illustrator"
+msgstr "Illustratör"
+
+#: /Users/jonatanfried/Fokus/fokus-theme/newspapermeta/newspapermeta.php:446
+msgid "Lead"
+msgstr "Ledord"
+
+#: /Users/jonatanfried/Fokus/fokus-theme/newspapermeta/newspapermeta.php:450
+msgid "Quote"
+msgstr "Citat"
+
+#: /Users/jonatanfried/Fokus/fokus-theme/newspapermeta/newspapermeta.php:455
+msgid "Video"
+msgstr "Video"
+
+#: /Users/jonatanfried/Fokus/fokus-theme/newspapermeta/newspapermeta.php:461
+#: /Users/jonatanfried/Fokus/fokus-theme/newspapermeta/newspapermeta.php:476
+msgid "Text"
+msgstr "Text"
+
+#: /Users/jonatanfried/Fokus/fokus-theme/newspapermeta/newspapermeta.php:465
+msgid "HTML for video player"
+msgstr "HTML för videospelare"
+
+#: /Users/jonatanfried/Fokus/fokus-theme/newspapermeta/newspapermeta.php:470
+msgid "Slideshow"
+msgstr "Bildspel"
+
+#: /Users/jonatanfried/Fokus/fokus-theme/newspapermeta/newspapermeta.php:480
+msgid "Clickable image"
+msgstr "Klickbar bild"
+
+#: /Users/jonatanfried/Fokus/fokus-theme/newspapermeta/newspapermeta.php:485
+msgid "Clickable image for frontpage"
+msgstr "Klickbar bild till framsidan"
+
+#: /Users/jonatanfried/Fokus/fokus-theme/newspapermeta/newspapermeta.php:490
+msgid "Images"
+msgstr "Bilder"
+
+#: /Users/jonatanfried/Fokus/fokus-theme/newspapermeta/newspapermeta.php:497
+msgid "Other information"
+msgstr "Övrig information"
+
+#: /Users/jonatanfried/Fokus/fokus-theme/newspapermeta/newspapermeta.php:499
+msgid "Sound clip"
+msgstr "Ljudklipp"
+
+#: /Users/jonatanfried/Fokus/fokus-theme/newspapermeta/newspapermeta.php:503
+msgid "More from story"
+msgstr "Mer ur reportaget"
+
+#: /Users/jonatanfried/Fokus/fokus-theme/newspapermeta/newspapermeta.php:507
+msgid "External links"
+msgstr "Externa länkar"
+
+#: /Users/jonatanfried/Fokus/fokus-theme/newspapermeta/newspapermeta.php:511
+msgid "Poll"
+msgstr "Omröstning"
+
