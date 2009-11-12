@@ -6,6 +6,77 @@ Description: This plugin will add a set of predefined custom fields to the edit 
 Version: 2.0
 Author URI: http://goodold.se/
 */
+
+/* BEGIN FUNCTIONS FOR GETTING THINGS */
+
+# Get any field
+
+function get_newspapermeta($field, $echo=1, $before='', $after=''){
+	$newspapermeta = get_post_custom_values('_newspapermeta_fields',$post->ID);
+	$fields = (unserialize($newspapermeta[0]));
+	if($fields[$field] !== NULL) { 
+		$output = $fields[$field];
+		if($echo == 0) {
+			RETURN $output;
+		} else {
+			echo $before . $output . $after;
+		}
+	}
+
+}
+
+# Get image
+
+function get_image($field, $width){
+	$image = get_newspapermeta($field, 0);
+	if (!empty($image)) {
+		if ($_SERVER['SERVER_NAME'] == 'localhost'){
+			echo $image.'" width="'.$width.'px"';
+		} else {
+			preg_match('/[0-9]{4}\/[0-9]{2}\/.+\.jpg/', $image, $matches);
+			$image_scaled = get_bloginfo('url').'/t/i/'.$width.'/'.$matches[0];	
+			echo $image_scaled.'" width="'.$width.'px"';
+		}	
+	} else {
+		echo get_bloginfo('url').'/wp-content/themes/fokus/images/portraits/'.$width.'/'.get_the_author_ID().'.jpg"';
+	} echo '"alt="';the_title_attribute(); echo '"';
+}
+
+# Get author (if any)
+
+function get_author(){
+	$author = get_newspapermeta('author',0);
+	if (!empty($author)) {
+		echo $author;
+	} else { 
+		the_author_posts_link(); 
+	}
+}
+
+# Get slideshow
+
+function get_photos($image, $width){
+	$photos = get_newspapermeta('photos_src',0);
+	$photos_nr = count($photos);
+	$i = 0;
+	while ($i < $photos_nr){
+		if ($i == 0){ 
+			echo '<p class="caption">
+				<span class="red-word">'.get_newspapermeta('photos_title',0).'.</span> '.get_newspapermeta('photos_text',0).'
+				<a class="play elastic" href="'.$photos[0]['href'].'" rel="'.get_newspapermeta('photos_title',0).'">Fler Bilder</a>
+			</p>
+			<img width="'.$width.'" src="'.get_newspapermeta('top_image',0).'" alt="'.get_newspapermeta('photos_text',0).'"/>';
+		} else {
+			echo '<a href="'.$photos[$i]["href"].'" rel="'.get_newspapermeta('photos_title',0).'" class="elastic" style="display:none" title="'.$photos[$i]["title"].'">'.$photos[$i]["href"].'</a>';
+		}
+	$i++;	
+	}
+}
+
+/* END FUNCTIONS FOR GETTING THINGS */
+
+/* BEGIN PLUGIN */
+
 $plugin_dir = basename(dirname(__FILE__));
 load_plugin_textdomain( 'newspapermeta', 'wp-content/plugins/'.
 $plugin_dir.'/languages', $plugin_dir.'/languages' ); 
@@ -442,7 +513,7 @@ class NewspaperMetaController {
             'title' => __('Illustrator', 'newspapermeta'),
             'type'  => 'text',
           ), 
-          'red_word' => array(
+          'red-word' => array(
             'title' => __('Lead', 'newspapermeta'),
             'type'  => 'text',
           ), 
@@ -518,4 +589,6 @@ class NewspaperMetaController {
 
     return $this->_definition;
   }
+  
+
 }
